@@ -3,10 +3,6 @@
     require 'header.inc.php';
 ?>
 
-    <div id="ss-navbar">
-        Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
-    </div>
-
     <article id="mlr-note">
         <div id="apercu">
             <img src="img/zeldaBOTWbanner.jpg" alt="">
@@ -50,11 +46,7 @@
         </div>
     </article>
 
-    <footer>
-        <p>
-            Copyright © 2021-2024 GameLibrary. Tous droits réservés. Un site made by @mmi21h11
-        </p>
-    </footer>
-</body>
-
-</html>
+<?php
+    require 'footer_html.inc.php';
+    require 'fin_html.inc.php';
+?>

@@ -112,6 +112,7 @@ img#noteimg {
 footer {
     width: 100%;
     padding: 10px;
+    bottom: 0%;
     background-color: black;
     color: grey;
     text-align: center;
@@ -161,6 +162,7 @@ footer p {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 input#jeu_search {
@@ -182,11 +184,8 @@ button#btn-search {
 
 .form2 {
     width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
+    margin: 0 auto;
 }
 
 .form2 h2 {

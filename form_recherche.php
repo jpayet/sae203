@@ -19,7 +19,7 @@
 </form>
 
 <form action="reponse_recherche.php" class="form2" data-parsley-validate>
-    <h2>Recherche avancé</h2>
+    <h2>Recherche avancée</h2>
     <div class="textbox">
         <i>€</i>
         <input type="number" placeholder="prix minimum" id="prix_min" name="prix_min" data-parsley-type="number">
@@ -34,3 +34,8 @@
     </div>
     <input type="submit" value="Rechercher" id="btn-last">
 </form>
+
+<?php
+    require 'footer_html.inc.php';
+    require 'fin_html.inc.php';
+?>
