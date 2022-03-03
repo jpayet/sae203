@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@500&display=swap');
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -21,20 +21,45 @@ nav {
 
 #ss-navbar span {
     color: orange;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #mlr-note {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     gap: 20px;
 }
 
 #mlr-note h1 {
-    font-size: 2vw;
+    font-size: 2.5vw;
+    font-family: 'League Gothic', sans-serif;
+}
+
+#titreNote {
+    font-size: 1.5vw;
+}
+
+img#noteimg {
+    width: 6vw;
+}
+
+#frst-info p {
+    line-height: 35px;
+}
+
+#frst-info p img {
+    width: 10vw;
+}
+
+#prixNote {
+    font-weight: bold;
+    color: red;
+    margin-right: 2px;
 }
 
 #apercu img {
-    width: 55vw;
+    width: 45vw;
     margin-left: 20px;
 }
 
@@ -49,13 +74,17 @@ nav {
     margin-bottom: 20px;
 }
 
-#cp-coeur h3::after {
+#cp-coeur h2::after {
     content: '';
     position: absolute;
     background-color: green;
     clip-path: circle();
     width: 12px;
     height: 12px;
+}
+
+#cp-coeur img {
+    height: 450px;
 }
 
 #p {
