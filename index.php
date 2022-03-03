@@ -50,14 +50,9 @@
         </div>
     </article>
 
-    <div>
-        <p>Back To Top</p>
-    </div>
-
     <footer>
         <p>
-            GAME LIBRARY - 2021-2022 - @Copyright <br />
-            Tout droits réservés
+            Copyright © 2021-2024 GameLibrary. Tous droits réservés. Un site made by @mmi21h11
         </p>
     </footer>
 </body>
