@@ -8,35 +8,13 @@ nav {
     width: 100%;
 }
 
-#demi-navbar {
-    width: 35vw;
-    height: 50px;
-    float: right;
-    background-color: grey;
-    color: #fff;
+#ss-navbar {
+    width: 100%;
+    height: 100px
 }
 
-#demi-navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
-}
-
-#demi-navbar ul li a {
-    text-decoration: none;
-    font-size: 1vw;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 20px;
-    color: #fff;
-}
-
-h1 {
-    font-size: 2vw;
-    margin-top: 10px;
-    margin-left: 20px;
+#ss-navbar span {
+    color: orange;
 }
 
 #mlr-note {
@@ -45,7 +23,7 @@ h1 {
     gap: 20px;
 }
 
-#mlr-note h2 {
+#mlr-note h1 {
     font-size: 2vw;
 }
 
@@ -60,7 +38,7 @@ h1 {
     justify-content: center;
 }
 
-#cp-coeur h3 {
+#cp-coeur h2 {
     text-align: center;
     margin-bottom: 20px;
 }
