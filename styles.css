@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    width: 100%;
+}
+
+#demi-navbar {
+    width: 35vw;
+    height: 50px;
+    float: right;
+    background-color: grey;
+    color: #fff;
+}
+
+#demi-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#demi-navbar ul li a {
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2vw;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#mlr-note {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+#mlr-note h2 {
+    font-size: 2vw;
+}
+
+#apercu img {
+    width: 55vw;
+    margin-left: 20px;
+}
+
+#cp-coeur {
+    margin-top: 30px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+#cp-coeur h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cp-coeur h3::after {
+    content: '';
+    position: absolute;
+    background-color: green;
+    clip-path: circle();
+    width: 12px;
+    height: 12px;
+}
+
+#p {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.jeu-coeur img {
+    width: 20vw;
+}
