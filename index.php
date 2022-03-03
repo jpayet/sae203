@@ -3,26 +3,16 @@
     require 'header.inc.php';
 ?>
 
-    <div id="demi-navbar">
-        <ul>
-            <li><a href="#">dernieres</a></li>
-            <li><a href="#">sorties</a></li>
-            <li><a href="#">jeux</a></li>
-            <li><a href="#">darmode</a></li>
-        </ul>
+    <div id="ss-navbar">
+        Bienvenue sur <span><b>GameLibrary</b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
     </div>
-    <h1>
-        GAME LIRARY: explorer l'univers du jeu vidéo. <br />
-        <!--Profiter de nombreuses données gratuitement-->
-        <!--animation 2e texte qui prend la place et vice versa-->
-    </h1>
 
     <article id="mlr-note">
         <div id="apercu">
             <img src="img/zeldaBOTWbanner.jpg" alt="">
         </div>
         <div id="frst-info">
-            <h2>Le mieux noté</h2>
+            <h1>Le mieux noté</h2>
             <!-- design photoshop avec la note -->
             <!--Recupérer Nom,
             annee sortie,
@@ -31,7 +21,7 @@
     </article>
     <hr>
     <article id="cp-coeur">
-        <h3>Nos coups de coeurs</h3>
+        <h2>Nos coups de coeurs</h3>
         <div id="p">
         <article class="jeu-coeur">
             <img src="img/xenoblade-chronicles-2.jpg" alt="">
