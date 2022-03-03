@@ -4,6 +4,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background-color: rgb(55, 55, 55);
+    color: #fff;
+}
+
 nav {
     width: 100%;
 }
@@ -28,6 +33,7 @@ nav {
 #mlr-note {
     margin-top: 20px;
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -59,19 +65,22 @@ img#noteimg {
 }
 
 #apercu img {
-    width: 45vw;
+    width: 650px;
     margin-left: 20px;
 }
 
 #cp-coeur {
     margin-top: 30px;
     margin-left: 20px;
+    margin-bottom: 35px;
     justify-content: center;
 }
 
 #cp-coeur h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 2px;
 }
 
 #cp-coeur h2::after {
@@ -85,6 +94,13 @@ img#noteimg {
 
 #cp-coeur img {
     height: 450px;
+    width: 20vw;
+    transition: 0.5s;
+}
+
+#cp-coeur img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 #p {
@@ -93,6 +109,15 @@ img#noteimg {
     gap: 20px;
 }
 
-.jeu-coeur img {
-    width: 20vw;
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: grey;
+    text-align: center;
+    border-top: 2px solid orange;
+}
+
+footer p {
+    margin-bottom: 0;
 }
