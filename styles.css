@@ -121,3 +121,21 @@ footer {
 footer p {
     margin-bottom: 0;
 }
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: Bold;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-brand span#brand {
+    color: orange;
+}
