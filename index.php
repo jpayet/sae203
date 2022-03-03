@@ -4,7 +4,7 @@
 ?>
 
     <div id="ss-navbar">
-        Bienvenue sur <span><b>GameLibrary</b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
+        Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
     </div>
 
     <article id="mlr-note">
@@ -13,10 +13,14 @@
         </div>
         <div id="frst-info">
             <h1>Le mieux noté</h2>
-            <!-- design photoshop avec la note -->
-            <!--Recupérer Nom,
-            annee sortie,
-            prix -->
+            <img id="noteimg" src="img/note-sae203.png" alt="">
+            <p>
+                <span id="titreNote">The Legend Of Zelda : Breath Of The Wild </span><br>
+                <i>sortie le 03/03/2017 </i><br>
+                prix sur le <span id="prixNote">Nintendo e-shop</span><b>: 69.99€ </b> <br>
+                Obtenir 👇<br>
+                <a href="https://www.nintendo.fr/Jeux/Wii-U/The-Legend-of-Zelda-Breath-of-the-Wild-893260.html"><img src="img/eshop.png" alt=""></a>
+            </p>
         </div>
     </article>
     <hr>
@@ -24,7 +28,7 @@
         <h2>Nos coups de coeurs</h3>
         <div id="p">
         <article class="jeu-coeur">
-            <img src="img/xenoblade-chronicles-2.jpg" alt="">
+            <img src="img/xcom2.jpg" alt="">
             <div class="info">
                 
             </div>
