@@ -83,6 +83,13 @@ img#noteimg {
     letter-spacing: 2px;
 }
 
+.imgcoeur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
 #cp-coeur h2::after {
     content: '';
     position: absolute;
@@ -93,8 +100,8 @@ img#noteimg {
 }
 
 #cp-coeur img {
+    width: 298px;
     height: 450px;
-    width: 20vw;
     transition: 0.5s;
 }
 
@@ -149,7 +156,7 @@ footer p {
 #titrep2 {
     margin-top: 15px;
     text-align: center;
-    font-size: 1.8vw;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -187,7 +194,7 @@ button#btn-search {
     color: white;
     margin: 0 auto;
     padding: 20px;
-    margin-bottom: 8.2vw;
+    margin-bottom: 14.9vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -235,7 +242,6 @@ button#btn-search {
 
 .pcp {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 20px;
@@ -246,7 +252,7 @@ button#btn-search {
 .infobdd {
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 30vw;
+    width: 460px;
     transition: 0.5s;
     background-color: rgb(55, 55, 55);
 }
@@ -277,4 +283,48 @@ button#btn-search {
 
 .stud_dev span {
     color: orange;
+}
+
+@media screen and (max-width: 480px) {
+    #ss-navbar {
+        font-size: 2.25vw;
+    }
+    #mlr-note {
+        margin-top: 0;
+        display: block;
+    }
+    #apercu {
+        margin-left: 0;
+    }
+    #apercu img {
+        margin-left: 0;
+        width: 100%;
+    }
+    #mlr-note h1 {
+        display: none;
+    }
+    #titreNote {
+        font-size: 25px;
+        text-align: center;
+    }
+    #frst-info a img {
+        width: 100px;
+    }
+    #frst-info #noteimg {
+        width: 70px;
+    }
+    .infobdd {
+        width: 440px;
+    }
+    .form1 {
+        margin: 0 auto;
+        width: 95%;
+    }
+    .form2 {
+        width: 95%;
+        margin-top: 20px;
+    }
+    #btn-search {
+        font-size: 14px;
+    }
 }
