@@ -50,10 +50,6 @@
         <i>€</i>
         <input type="number" placeholder="prix maximum" id="prix_max" name="prix_max" data-parsley-type="number">
     </div>
-    <div class="textbox">
-    <i class="fa-brands fa-dev"></i>
-        <input type="text" placeholder="studio de développement" id="stud_dev" name="stud_dev">
-    </div>
     <input type="submit" value="Rechercher" id="btn-last">
 </form>
 

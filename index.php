@@ -42,28 +42,11 @@
     <hr>
     <article id="cp-coeur">
         <h2>Nos coups de coeurs</h3>
-        <div id="p">
-        <article class="jeu-coeur">
+        <div class="imgcoeur">
             <img src="img/xcom2.jpg" alt="">
-            <div class="info">
-                
-            </div>
-        </article>
-
-        <article class="jeu-coeur">
-            <img src="img/borderlands-3.jpg" alt="">
-            <div class="info">
-                <!-- recup donnes bdd -->
-            </div>
-        </article>
-
-        <article class="jeu-coeur">
             <img src="img/ori.jpg" alt="">
-            <div class="info">
-                <!-- recup donnes bdd -->
-            </div>
-        </article>
-        </div>
+            <img src="img/borderlands-3.jpg" alt="">
+        </div> 
     </article>
 
 <?php
