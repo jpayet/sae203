@@ -26,12 +26,14 @@
     <article id="mlr-note">
         <div id="apercu">
             <img src="img/zeldaBOTWbanner.jpg" alt="">
-        </div>
+        </div> 
         <div id="frst-info">
             <h1>Le mieux noté</h2>
-            <img id="noteimg" src="img/note-sae203.png" alt="">
             <p>
                 <span id="titreNote">The Legend Of Zelda : Breath Of The Wild </span><br>
+            </p>
+            <img id="noteimg" src="img/note-sae203.png" alt="">
+            <p>
                 <i>sortie le 03/03/2017 </i><br>
                 prix sur le <span id="prixNote">Nintendo e-shop</span><b>: 69.99€ </b> <br>
                 Obtenir 👇<br>
