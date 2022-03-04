@@ -26,7 +26,7 @@
     <article id="mlr-note">
         <div id="apercu">
             <img src="img/zeldaBOTWbanner.jpg" alt="">
-        </div>
+        </div> 
         <div id="frst-info">
             <h1>Le mieux noté</h2>
             <p>
