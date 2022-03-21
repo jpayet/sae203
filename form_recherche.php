@@ -14,7 +14,7 @@
                 <a class="nav-item nav-link " href="index.php">Accueil <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="listing.php">Catalogue</a>
                 <a class="nav-item nav-link active" href="form_recherche.php">Recherche</a>
-                <a class="nav-item nav-link" href="#">Administration</a>
+                <a class="nav-item nav-link" href="admin/admin.php">Administration</a>
             </div>
         </div>
     </nav>
@@ -27,8 +27,8 @@
 
 <h1 id="titrep2">Trouvez le <span>jeu</span> qu'il vous faut <span>!</span></h1>
 
-<form action="reponse_recherche.php" class="form1" data-parsley-validate>
-    <input type="search" list="jeu" id="jeu_search" name="jeu_search" placeholder="Entrer un nom" />
+<form action="reponse_recherche.php" class="form1" method="GET" data-parsley-validate>
+    <input type="text" list="jeu" id="jeu_search" name="texte" placeholder="Entrer un nom" />
     <datalist id="jeu">
         <option value="Borderlands 3">
         <option value="Mario Kart 8 Deluxe">
@@ -40,7 +40,8 @@
     <button type="submit" id="btn-search">rechercher</button>
 </form>
 
-<form action="reponse_recherche.php" class="form2" data-parsley-validate>
+<!--
+    <form action="reponse_recherche.php" class="form2" data-parsley-validate>
     <h2>Recherche avancée</h2>
     <div class="textbox">
         <i>€</i>
@@ -52,6 +53,7 @@
     </div>
     <input type="submit" value="Rechercher" id="btn-last">
 </form>
+-->
 
 <?php
     require 'footer_html.inc.php';

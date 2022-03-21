@@ -13,7 +13,7 @@
                     <a class="nav-item nav-link active" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="listing.php">Catalogue</a>
                     <a class="nav-item nav-link" href="form_recherche.php">Recherche</a>
-                    <a class="nav-item nav-link" href="#">Administration</a>
+                    <a class="nav-item nav-link" href="admin/admin.php">Administration</a>
                 </div>
             </div>
         </nav>

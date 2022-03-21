@@ -4,6 +4,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+td,
+th,
+tr {
+    border: 1px solid black;
+}
+
 body {
     background-color: #202945;
     color: #fff;
