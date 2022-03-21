@@ -14,7 +14,7 @@
                 <a class="nav-item nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link active" href="listing.php">Catalogue</a>
                 <a class="nav-item nav-link" href="form_recherche.php">Recherche</a>
-                <a class="nav-item nav-link" href="#">Administration</a>
+                <a class="nav-item nav-link" href="admin/admin.php">Administration</a>
             </div>
         </div>
     </nav>
@@ -25,28 +25,12 @@
 </div>
 
 <?php
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'bdd22105824');   
-    $mabd->query('SET NAMES utf8;');
 
-    $req = "SELECT * FROM jeux_video INNER JOIN stud_developpement ON jeux_video._stud_id = stud_developpement.stud_id";
-    $resultat = $mabd->query($req); 
+	require 'lib_crud.inc.php';
+	$co=connexionBD();
+	afficherCatalogue($co);
+	deconnexionBD($co);
 
-    echo '<div class="pcp">';
-        foreach ($resultat as $value) {
-
-            echo '<div class="infobdd">' ;
-            echo '<h3>'.$value['jv_titre'] . '</h3>';
-            echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';
-            echo '<br> <p>Prix: ' . $value['jv_prix'] . '€ </p>';
-            echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
-            echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
-            echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
-            echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co-fondateur']. '</p>'; 
-            echo '</div>';  
-        }
-    echo '</div>';
-?>
-<?php
     require 'footer_html.inc.php';
     require 'fin_html.inc.php';
 ?>

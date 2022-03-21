@@ -1,0 +1,12 @@
+table,
+th,
+tr,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+img {
+    max-width: 200px;
+    height: 200px;
+}
