@@ -19,29 +19,13 @@
         </nav>
     </header>
 
-<?php
+    <?php
 
-$nomJeu=$_GET['texte'];
-    
-$nomJEU = $_GET['texte'];
-$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'mmi21h11', '$Root22105824');
-$mabd->query('SET NAMES utf8;');
-$req = "SELECT * FROM jeux_video 
-            INNER JOIN stud_developpement 
-            ON jeux_video._stud_id = stud_developpement.stud_id
-            WHERE jv_titre = '". $nomJeu . "'";
-$resultat = $mabd->query($req);
-foreach ($resultat as $value) {
-    echo '<img class="vignette" src="images/'.$value['bd_photo'].'">';
-    echo '<h3>'.$value['bd_titre'] . '</h3>';
-    echo '<p>tarif: ' . $value['bd_prix'] . ' euro </p>';
-    echo '<p class="page">' . $value['bd_nb_pages'] . ' pages </p>';
-    echo '<p>Résumé: ' . $value['bd_resume'] . ' </p>';
-    echo '<p class="auteur"> de ' . $value['auteur_nom'] . '</p>';
-    echo '<hr>';
-}
-?>
-...
-    require 'footer_html.inc.php';
-    require 'fin_html.inc.php';
-?>
+        require 'lib_crud.inc.php';
+        $co=connexionBD();
+        afficherResultatRecherche($co);
+        deconnexionBD($co);
+
+        require 'footer_html.inc.php';
+        require 'fin_html.inc.php';
+    ?>

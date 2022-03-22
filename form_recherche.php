@@ -28,32 +28,18 @@
 <h1 id="titrep2">Trouvez le <span>jeu</span> qu'il vous faut <span>!</span></h1>
 
 <form action="reponse_recherche.php" class="form1" method="GET" data-parsley-validate>
-    <input type="text" list="jeu" id="jeu_search" name="texte" placeholder="Entrer un nom" />
-    <datalist id="jeu">
-        <option value="Borderlands 3">
-        <option value="Mario Kart 8 Deluxe">
-        <option value="Xenoblade Chronicles 2">
-        <option value="Cuphead">
-        <option value="XCOM 2">
-        <option value="Clash Royale">
+    <input type="search" id="jeu_search" name="texte" list="jeux" autocomplete="off" />
+    <datalist id="jeux">
+        <?php
+            // On va afficher ici la datalist
+            require 'lib_crud.inc.php';
+            $co=connexionBD();
+            genererDatalistJeux($co);
+            deconnexionBD($co);
+        ?>
     </datalist>
     <button type="submit" id="btn-search">rechercher</button>
 </form>
-
-<!--
-    <form action="reponse_recherche.php" class="form2" data-parsley-validate>
-    <h2>Recherche avancée</h2>
-    <div class="textbox">
-        <i>€</i>
-        <input type="number" placeholder="prix minimum" id="prix_min" name="prix_min" data-parsley-type="number">
-    </div>
-    <div class="textbox">
-        <i>€</i>
-        <input type="number" placeholder="prix maximum" id="prix_max" name="prix_max" data-parsley-type="number">
-    </div>
-    <input type="submit" value="Rechercher" id="btn-last">
-</form>
--->
 
 <?php
     require 'footer_html.inc.php';
