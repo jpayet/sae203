@@ -345,10 +345,33 @@
             echo '<p>Erreur : ' . $e->getMessage() . '</p>';
             die();
         }
+
+        try {
+            $resultat = $mabd->query($req);
+            if ($resultat != ''){
+                echo '<div class="pcp">';
+                foreach ($resultat as $value) {
+                    echo '<div class="infobdd">' ;
+                    echo '<h3>'.$value['jv_titre'] . '</h3>';
+                    echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';
+                    echo '<br> <p>Prix: ' . $value['jv_prix'] . '€ </p>';
+                    echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
+                    echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
+                    echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
+                    echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co_fondateur']. '</p>'; 
+                    echo '</div>';  
+                }
+                echo '</div>';
+            }
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+
         // ICI VOTRE CODE POUR AFFICHER LES ALBUMS FILTRES
         echo '<div class="pcp">';
             foreach ($resultat as $value) {
-
                 echo '<div class="infobdd">' ;
                 echo '<h3>'.$value['jv_titre'] . '</h3>';
                 echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';

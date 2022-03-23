@@ -25,7 +25,6 @@
         $co=connexionBD();
         afficherResultatRecherche($co);
         deconnexionBD($co);
-
-        require 'footer_html.inc.php';
+        
         require 'fin_html.inc.php';
     ?>
