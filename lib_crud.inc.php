@@ -2,6 +2,7 @@
 
   require 'secretxyz123.inc.php';
 
+//CONNEXION ET DECONNEXION
 
   function connexionBD()
   {
@@ -21,6 +22,14 @@
     // on retourne la variable de connexion
     return $mabd;
   }
+
+   // déconnexion de la base de données
+   function deconnexionBD(&$mabd) {
+    // on se déconnexte en mettant la variable de connexion à null 
+    $mabd=null;
+  }
+
+//PAGE CATALOGUE
 
   // affichage du catalogue 
   function afficherCatalogue($mabd) {
@@ -45,17 +54,13 @@
           echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
           echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
           echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
-          echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co-fondateur']. '</p>'; 
+          echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co_fondateur']. '</p>'; 
           echo '</div>';  
       }
     echo '</div>';
   }
 
-  // déconnexion de la base de données
-  function deconnexionBD(&$mabd) {
-    // on se déconnexte en mettant la variable de connexion à null 
-    $mabd=null;
-  }
+//ADMIN PAGE 1 (JEUX VIDEO)
 
   // affichage de la liste des BDs pour la gestion
   function afficherListe($mabd) {
@@ -161,7 +166,7 @@
       // la fonction retourne le tableau associatif 
       // contenant les champs et leurs valeurs
       return $resultat->fetch();
-  }
+    }
 
 	// afficher le "bon" auteur parmi les auteurs (prénom et nom)
    // dans les balises "<option>"
@@ -206,6 +211,186 @@
             die();
         }
     }
+
+//PAGE 2 (STUDIO)
+
+    function afficherTableSudio($mabd) {
+        $req = "SELECT * FROM stud_developpement";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        echo '<table>'."\n";
+        echo '<thead><tr><th>Nom</th><th>Date de création</th><th>Fondateur</th><th>Co-fondateur</th><th>Siege social (ville)</th><th>Siege social (pays)</th></th><th>Modifier</th><th>Supprimer</th></tr></thead>'."\n";
+        echo '<tbody>'."\n";
+        foreach ($resultat as $value) {
+            echo '<tr>'."\n";
+            echo '<td>'.$value['stud_nom'].'</td>'."\n";
+            echo '<td>'.$value['stud_date_creation'].'</td>'."\n";
+            echo '<td>'.$value['stud_fondateur'].'</td>'."\n";
+            echo '<td>'.$value['stud_co_fondateur'].'</td>'."\n";
+            echo '<td>'.$value['stud_siege_social_ville'].'</td>'."\n";
+            echo '<td>'.$value['stud_siege_social_pays'].'</td>'."\n";
+            echo '<td><a href="table2_update_form.php?num='.$value['stud_id'].'">Modifier</a></td>'."\n";
+            echo '<td><a href="table2_delete.php?num='.$value['stud_id'].'">Supprimer</a></td>'."\n";
+            echo '</tr>'."\n";
+        }
+        echo '</tbody>'."\n";
+        echo '</table>'."\n";
+    }
+
+    function ajouterStudio($mabd, $nom, $date, $fonda, $cofonda, $scville, $scpays){
+        $req = 'INSERT INTO stud_developpement (stud_nom, stud_date_creation, stud_fondateur, stud_co_fondateur, stud_siege_social_ville, stud_siege_social_pays) VALUES ("'.$nom.'", "'.$date.'", "'.$fonda.'", "'.$cofonda.'", "'.$scville.'", "'.$scpays.'")';
+        //echo '<p>' . $req . '</p>' . "\n";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        if ($resultat->rowCount() == 1) {
+            echo '<p>Le studio ' . $nom . ' a été ajoutée au catalogue.</p>' . "\n";
+        } else {
+            echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
+            die();
+        }
+    }
+
+    function effaceStud($mabd, $id) {
+        $req = 'DELETE FROM stud_developpement WHERE stud_id='.$id.'';
+        //echo '<p>'.$req.'</p>'."\n";
+        try{
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        if ($resultat->rowCount()==1) {
+            echo '<p>Le studio de dev '.$id.' a été supprimée du catalogue.</p>'."\n";
+        } else {
+            echo '<p>Erreur lors de la suppression.</p>'."\n";
+            die();
+        }
+    }
+
+    function getStud($mabd, $idStud) {
+        $req = 'SELECT * FROM stud_developpement WHERE stud_id='.$idStud;
+        //echo '<p>GetBD() : '.$req.'</p>'."\n";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        // la fonction retourne le tableau associatif 
+        // contenant les champs et leurs valeurs
+        return $resultat->fetch();
+    }
+
+    function modifierStud($mabd, $id, $nom, $date, $fondateur, $co_fondateur,  $scville, $scpays)
+    {
+        $req = 'UPDATE stud_developpement 
+                SET stud_nom="'.$nom.'", stud_date_creation="'.$date.'", stud_fondateur="'.$fondateur.'", stud_co_fondateur="'.$co_fondateur.'", stud_siege_social_ville="'.$scville.'", stud_siege_social_pays="'.$scpays.'" 
+                WHERE stud_id='.$id;
+        //echo '<p>' . $req . '</p>' . "\n";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        if ($resultat->rowCount() == 1) {
+            echo '<p>Le studio ' . $nom . ' a été modifié.</p>' . "\n";
+        } else {
+            echo '<p>Erreur lors de la modification.</p>' . "\n";
+            die();
+        }
+    }
+
+    // Génération de la liste des auteurs dans le formulaire de recherche
+    function genererDatalistJeux($mabd) {
+        // on sélectionne le nom et prénom de tous les auteurs de la table auteurs
+        $req = "SELECT jv_titre FROM jeux_video";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        // pour chaque auteur, on met son nom et prénom dans une balise <option>
+        foreach ($resultat as $value) {
+            echo '<option value="'. $value['jv_titre'] .'">'; 
+        } 
+    }
+
+    // affichage des resultats de recherche
+    function afficherResultatRecherche($mabd) {
+        $res=htmlspecialchars($_GET['texte']);
+        $req = "SELECT * FROM jeux_video 
+                INNER JOIN stud_developpement 
+                ON jeux_video._stud_id = stud_developpement.stud_id
+                WHERE jv_titre LIKE '%" . $res . "%'";
+        try {
+            $resultat = $mabd->query($req);
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+
+        try {
+            $resultat = $mabd->query($req);
+            if ($resultat != ''){
+                echo '<div class="pcp">';
+                foreach ($resultat as $value) {
+                    echo '<div class="infobdd">' ;
+                    echo '<h3>'.$value['jv_titre'] . '</h3>';
+                    echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';
+                    echo '<br> <p>Prix: ' . $value['jv_prix'] . '€ </p>';
+                    echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
+                    echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
+                    echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
+                    echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co_fondateur']. '</p>'; 
+                    echo '</div>';  
+                }
+                echo '</div>';
+            }
+        } catch (PDOException $e) {
+            // s'il y a une erreur, on l'affiche
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+
+        // ICI VOTRE CODE POUR AFFICHER LES ALBUMS FILTRES
+        echo '<div class="pcp">';
+            foreach ($resultat as $value) {
+                echo '<div class="infobdd">' ;
+                echo '<h3>'.$value['jv_titre'] . '</h3>';
+                echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';
+                echo '<br> <p>Prix: ' . $value['jv_prix'] . '€ </p>';
+                echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
+                echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
+                echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
+                echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co_fondateur']. '</p>'; 
+                echo '</div>';  
+            }
+        echo '</div>';
+    }
+
+
+
+
+
+
+
 
 
 

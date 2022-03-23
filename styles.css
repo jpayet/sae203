@@ -11,8 +11,8 @@ tr {
 }
 
 body {
-    background-color: #202945;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 nav {
@@ -136,6 +136,11 @@ footer p {
     margin-bottom: 0;
 }
 
+#footer {
+    position: fixed;
+    bottom: 0;
+}
+
 .navbar-dark .navbar-nav .nav-link.active {
     color: orange;
     font-weight: bold;
@@ -154,96 +159,52 @@ footer p {
     color: orange;
 }
 
-#btn-search {
-    width: 100px;
-    height: 30px;
-}
-
 #titrep2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     margin-top: 15px;
     text-align: center;
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-#titrep2 span {
-    color: orange;
-}
-
 .form1 {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-bottom: 50px;
+    align-items: center;
 }
 
-input#jeu_search {
-    width: 400px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    height: 40px;
-    outline: none;
-}
-
-button#btn-search {
-    background-color: orange;
-    color: #fff;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    outline: none;
-    height: 40px;
-}
-
-.form2 {
-    width: 500px;
-    color: white;
+.form1 {
     margin: 0 auto;
-    padding: 20px;
-    margin-bottom: 14.9vw;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: center;
 }
 
-.form2 h2 {
-    float: left;
-    font-size: 30px;
-    border-bottom: 3px solid orange;
-    margin-bottom: 50px;
-}
-
-.textbox {
-    width: 80%;
-    overflow: hidden;
-    font-size: 20px;
-    padding: 8px 0;
-    margin: 8px 0;
-    border-bottom: 1px solid orange;
-}
-
-.textbox i {
-    width: 26px;
-    float: left;
+.form1 button {
     text-align: center;
+    background-color: white;
+    border: none;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.textbox input {
+.form1 input {
+    height: 28px;
     border: none;
     outline: none;
-    background: none;
-    color: white;
-    font-size: 18px;
-    width: 80%;
-    float: left;
-    margin: 0 10px;
+    width: 40vw;
+    border-radius: 5px 0px 0px 5px;
 }
 
-#btn-last {
-    margin-top: 10px;
+.formulaire {
+    background-image: url(img/genshin-impact.jpg);
+    background-color: rgba(0, 0, 0, 0.267);
+    margin-top: 50px;
+    margin-left: 25%;
+    padding-top: 10px;
+    width: 50vw;
+    height: 200px;
     border-radius: 10px;
-    background-color: orange;
-    color: #fff;
-    font-weight: bold;
-    padding: 5px;
 }
 
 .pcp {
@@ -260,7 +221,8 @@ button#btn-search {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 460px;
     transition: 0.5s;
-    background-color: rgb(55, 55, 55);
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 .infobdd p,
@@ -289,6 +251,10 @@ button#btn-search {
 
 .stud_dev span {
     color: orange;
+}
+
+#mlr-note {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (max-width: 480px) {
