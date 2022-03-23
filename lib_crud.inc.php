@@ -333,7 +333,7 @@
 
     // affichage des resultats de recherche
     function afficherResultatRecherche($mabd) {
-        $res=$_GET['texte'];
+        $res=htmlspecialchars($_GET['texte']);
         $req = "SELECT * FROM jeux_video 
                 INNER JOIN stud_developpement 
                 ON jeux_video._stud_id = stud_developpement.stud_id
