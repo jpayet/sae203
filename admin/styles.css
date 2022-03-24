@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 table,
 th,
 tr,
@@ -6,7 +10,66 @@ td {
     text-align: center;
 }
 
+table {
+    margin: 0 auto;
+}
+
 img {
     max-width: 200px;
     height: 200px;
+}
+
+#ss-navbar {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ss-navbar span {
+    color: orange;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: Bold;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-brand span#brand {
+    color: orange;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    background-color: black;
+    color: grey;
+    text-align: center;
+    border-top: 2px solid orange;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
 }

@@ -117,7 +117,7 @@
   }
 
   function ajouterJeux($mabd, $titre, $annee, $nouvelleImage, $note,  $prix, $dispo, $multi, $studio){
-        $req = 'INSERT INTO jeux_video (jv_titre, jv_annee_sortie, jv_photo, jv_note, jv_prix, jv_disponibilite_mobile, jv_multiplateformes, _stud_id) VALUES ("'.$titre.'", "'.$annee.'", "img/uploads/'.$nouvelleImage.'", "'.$note.'", '.$prix.', "'.$dispo.'", "'.$multi.'", '.$studio.')';
+        $req = 'INSERT INTO jeux_video (jv_titre, jv_annee_sortie, jv_photo, jv_note, jv_prix, jv_disponibilite_mobile, jv_multiplateformes, _stud_id) VALUES ("'.$titre.'", "'.$annee.'", "img/uploads/'.$nouvelleImage.'", "'.$note.'/20", '.$prix.', "'.$dispo.'", "'.$multi.'", '.$studio.')';
         //echo '<p>' . $req . '</p>' . "\n";
         try {
             $resultat = $mabd->query($req);
@@ -194,7 +194,7 @@
     function modifierBD($mabd, $id, $titre, $annee, $nouvelleImage, $note,  $prix, $dispo, $multi, $studio)
     {
         $req = 'UPDATE jeux_video 
-                SET jv_titre="'.$titre.'", jv_annee_sortie="'.$annee.'", jv_photo="img/uploads/'.$nouvelleImage.'", jv_note="'.$note.'", jv_prix='.$prix.', jv_disponibilite_mobile="'.$dispo.'", jv_multiplateformes="'.$multi.'", _stud_id='.$studio.' 
+                SET jv_titre="'.$titre.'", jv_annee_sortie="'.$annee.'", jv_photo="img/uploads/'.$nouvelleImage.'", jv_note="'.$note.'/20", jv_prix='.$prix.', jv_disponibilite_mobile="'.$dispo.'", jv_multiplateformes="'.$multi.'", _stud_id='.$studio.' 
                 WHERE jv_id='.$id;
         //echo '<p>' . $req . '</p>' . "\n";
         try {
@@ -345,30 +345,7 @@
             echo '<p>Erreur : ' . $e->getMessage() . '</p>';
             die();
         }
-
-        try {
-            $resultat = $mabd->query($req);
-            if ($resultat != ''){
-                echo '<div class="pcp">';
-                foreach ($resultat as $value) {
-                    echo '<div class="infobdd">' ;
-                    echo '<h3>'.$value['jv_titre'] . '</h3>';
-                    echo '<img class="image" src="'.$value['jv_photo'].'"> <br>';
-                    echo '<br> <p>Prix: ' . $value['jv_prix'] . '€ </p>';
-                    echo '<p class="sortie"> Date de sortie : <span>' . $value['jv_annee_sortie'] .'</span></p>';
-                    echo '<p class="notelist">Note: ' . $value['jv_note'] .'</p>';
-                    echo '<p class="stud_dev"> Studio de developpement: <span>' . $value['stud_nom']. '</span></p>';
-                    echo '<p class="fondateurs"> Fondateur(s) : ' .$value['stud_fondateur']. ' ; ' .$value['stud_co_fondateur']. '</p>'; 
-                    echo '</div>';  
-                }
-                echo '</div>';
-            }
-        } catch (PDOException $e) {
-            // s'il y a une erreur, on l'affiche
-            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-            die();
-        }
-
+        
         // ICI VOTRE CODE POUR AFFICHER LES ALBUMS FILTRES
         echo '<div class="pcp">';
             foreach ($resultat as $value) {

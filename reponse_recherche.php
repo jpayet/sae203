@@ -10,9 +10,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="listing.php">Catalogue</a>
-                    <a class="nav-item nav-link" href="form_recherche.php">Recherche</a>
+                    <a class="nav-item nav-link active" href="form_recherche.php">Recherche</a>
                     <a class="nav-item nav-link" href="admin/admin.php">Administration</a>
                 </div>
             </div>

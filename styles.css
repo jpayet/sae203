@@ -165,18 +165,15 @@ footer p {
     text-align: center;
     font-size: 28px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .form1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.form1 {
-    margin: 0 auto;
-    display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .form1 button {
@@ -197,13 +194,14 @@ footer p {
 }
 
 .formulaire {
-    background-image: url(img/genshin-impact.jpg);
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     margin-top: 50px;
     margin-left: 25%;
     padding-top: 10px;
     width: 50vw;
-    height: 200px;
+    height: 150px;
     border-radius: 10px;
 }
 
@@ -255,6 +253,14 @@ footer p {
 
 #mlr-note {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-bg {
+    height: 85vh;
+    background-image: url(img/horizon2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1px 0;
 }
 
 @media screen and (max-width: 480px) {

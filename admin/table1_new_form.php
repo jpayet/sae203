@@ -12,8 +12,8 @@
 	    <form action="table1_new_valide.php" method="POST" enctype="multipart/form-data">
 	        Titre : <input type="text" name="titre" required /><br />
 	        Année de sortie: <input type="text" name="annee" min="1000" max="3000" required /><br />
-	        Note : <input type="text" name="note" required /><br />
-	        Prix : <input type="number" name="prix" min="0.00" max="10000.00" step="0.01" required /><br />
+	        Note : <input type="number" name="note" min="0" max="20" step="0.01" required />/20<br />
+	        Prix : <input type="number" name="prix" min="0.00" max="10000.00" step="0.01" required />€<br />
 	        Disponibilité mobile : 
             <select name="dispo">
                 <option value="oui">Oui</option>

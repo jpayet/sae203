@@ -21,8 +21,8 @@
         <input type="hidden" name="num" value="<?= $id; ?>" />
         Titre : <input type="text" name="titre" value="<?php echo $album['jv_titre']; ?>" required/><br />
         Année de sortie: <input type="text" name="annee" min="1000" max="3000" value="<?= $album['jv_annee_sortie']; ?>" required /><br />
-        note : <input type="text" name="note" value="<?= $album['jv_note']; ?>" required /><br />
-        Prix : <input type="number" name="prix" min="0.00" max="10000.00" step="0.01" value="<?= $album['jv_prix']; ?>" required /><br />
+        note : <input type="number" name="note" min="0" max="20" step="0.01" value="<?= floatval($album['jv_note']); ?>" required />/20<br />
+        Prix : <input type="number" name="prix" min="0.00" max="10000.00" step="0.01" value="<?= $album['jv_prix']; ?>" required />€<br />
         Disponibilité mobile : <select name="dispo" required>
             <option value="<?= $album['jv_disponibilite_mobile']; ?>"> <?php echo $album['jv_disponibilite_mobile']; ?></option>
             <option value="oui">Oui</option>
