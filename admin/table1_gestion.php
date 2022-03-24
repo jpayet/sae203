@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>SAE203</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+<?php
+    require '../debut_html.inc.php';
+?>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,9 +19,9 @@
         </nav>
     </header>
 
-        <h1>Gestion des données</h1>
+        <h1 class="gestion-h1"> Gestion des données</h1>
 
-        <p><a href="table1_new_form.php">Ajouter un jeux vidéo</a></p>
+        <p class="add"><a href="table1_new_form.php">Ajouter un jeux vidéo<i class="fa-solid fa-plus"></i></a></p>
         <?php
             require '../lib_crud.inc.php';
             $co=connexionBD();

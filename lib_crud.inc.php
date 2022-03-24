@@ -145,7 +145,7 @@
         die();
     }
     if ($resultat->rowCount()==1) {
-        echo '<p>La bande dessinée '.$id.' a été supprimée du catalogue.</p>'."\n";
+        echo '<p>Le jeu vidéo numéro '.$id.' a été supprimé du catalogue.</p>'."\n";
     } else {
         echo '<p>Erreur lors de la suppression.</p>'."\n";
         die();
@@ -205,7 +205,7 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>La bande dessinée ' . $titre . ' a été modifiée.</p>' . "\n";
+            echo '<p>Le jeu vidéo ' . $titre . ' a été modifié.</p>' . "\n";
         } else {
             echo '<p>Erreur lors de la modification.</p>' . "\n";
             die();
@@ -271,7 +271,7 @@
             die();
         }
         if ($resultat->rowCount()==1) {
-            echo '<p>Le studio de dev '.$id.' a été supprimée du catalogue.</p>'."\n";
+            echo '<p>Le studio numéro '.$id.' a été supprimée du catalogue.</p>'."\n";
         } else {
             echo '<p>Erreur lors de la suppression.</p>'."\n";
             die();
