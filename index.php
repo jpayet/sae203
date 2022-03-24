@@ -28,7 +28,7 @@
             <img src="img/zeldaBOTWbanner.jpg" alt="">
         </div> 
         <div id="frst-info">
-            <h1>Le mieux noté</h2>
+            <h1>Le mieux noté</h1>
             <p>
                 <span id="titreNote">The Legend Of Zelda : Breath Of The Wild </span><br>
             </p>
@@ -49,6 +49,7 @@
             <img src="img/ori.jpg" alt="">
             <img src="img/borderlands-3.jpg" alt="">
         </div> 
+        <p><a href="listing.php">Découvrir dans le catalogue<a></p>
     </article>
 
 <?php

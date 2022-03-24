@@ -1,13 +1,11 @@
+/***********
+    GENERAL
+*************/
+
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@500&family=Yanone+Kaffeesatz&display=swap');
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-}
-
-td,
-th,
-tr {
-    border: 1px solid black;
 }
 
 body {
@@ -15,8 +13,38 @@ body {
     color: #000;
 }
 
+p {
+    margin-bottom: 0;
+}
+
+
+/***********************
+    CONTENT 
+********************/
+
+
+/******* NAVBAR *********/
+
 nav {
     width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: Bold;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-brand span#brand {
+    color: orange;
 }
 
 #ss-navbar {
@@ -36,11 +64,19 @@ nav {
     margin-right: 5px;
 }
 
+
+/********** INDEX (ZELDA) ***********/
+
 #mlr-note {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 80vw;
     margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #mlr-note h1 {
@@ -54,10 +90,6 @@ nav {
 
 img#noteimg {
     width: 6vw;
-}
-
-#frst-info p {
-    line-height: 35px;
 }
 
 #frst-info p img {
@@ -74,6 +106,9 @@ img#noteimg {
     width: 650px;
     margin-left: 20px;
 }
+
+
+/**** INDEX (CP DE COEUR) *****/
 
 #cp-coeur {
     margin-top: 30px;
@@ -122,6 +157,13 @@ img#noteimg {
     gap: 20px;
 }
 
+#cp-coeur a {
+    text-align: center;
+}
+
+
+/********* FOOTER ********/
+
 footer {
     width: 100%;
     padding: 10px;
@@ -141,23 +183,34 @@ footer p {
     bottom: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link.active {
-    color: orange;
-    font-weight: bold;
+
+/******* FORM RECHERCHE ********/
+
+.form-bg {
+    height: 85vh;
+    background-image: url(img/horizon2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff;
+
+/* formulaire dans sa globalité */
+
+.formulaire {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin-top: 50px;
+    margin-left: 25%;
+    padding-top: 10px;
+    width: 50vw;
+    height: 150px;
+    border-radius: 10px;
 }
 
-.navbar-dark .navbar-brand {
-    font-weight: Bold;
-    letter-spacing: 2px;
-}
 
-.navbar-dark .navbar-brand span#brand {
-    color: orange;
-}
+/* titre du formulaire */
 
 #titrep2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -165,18 +218,18 @@ footer p {
     text-align: center;
     font-size: 28px;
     margin-bottom: 20px;
+    color: white;
 }
+
+
+/* Formulaire barre  + boutton */
 
 .form1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.form1 {
-    margin: 0 auto;
-    display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .form1 button {
@@ -196,16 +249,11 @@ footer p {
     border-radius: 5px 0px 0px 5px;
 }
 
-.formulaire {
-    background-image: url(img/genshin-impact.jpg);
-    background-color: rgba(0, 0, 0, 0.267);
-    margin-top: 50px;
-    margin-left: 25%;
-    padding-top: 10px;
-    width: 50vw;
-    height: 200px;
-    border-radius: 10px;
-}
+
+/********** PAGE CATALOGUE ********/
+
+
+/* toute la galerie */
 
 .pcp {
     display: flex;
@@ -216,6 +264,9 @@ footer p {
     justify-content: center;
 }
 
+
+/* cards */
+
 .infobdd {
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -225,10 +276,9 @@ footer p {
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
-.infobdd p,
-.infobdd span {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 20px;
+.infobdd:hover {
+    transform: scale(1.025);
+    transition: 0.5s;
 }
 
 .infobdd h3 {
@@ -236,9 +286,10 @@ footer p {
     font-size: 28px;
 }
 
-.infobdd:hover {
-    transform: scale(1.025);
-    transition: 0.5s;
+.infobdd p,
+.infobdd span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
 }
 
 .image {
@@ -253,49 +304,59 @@ footer p {
     color: orange;
 }
 
-#mlr-note {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 @media screen and (max-width: 480px) {
+    /*** NAVBAR ***/
     #ss-navbar {
         font-size: 2.25vw;
     }
+    /************
+        INDEX
+    ************/
+    /*** CAT ZELDA ***/
     #mlr-note {
-        margin-top: 0;
+        width: 92.5vw;
         display: block;
-    }
-    #apercu {
-        margin-left: 0;
     }
     #apercu img {
         margin-left: 0;
         width: 100%;
     }
+    #frst-info {
+        padding: 10px;
+    }
+    #titreNote {
+        word-spacing: -0.5px;
+        letter-spacing: -0.5px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
     #mlr-note h1 {
         display: none;
     }
-    #titreNote {
-        font-size: 25px;
-        text-align: center;
-    }
-    #frst-info a img {
-        width: 100px;
-    }
+    /*** IMG 20/20 ***/
     #frst-info #noteimg {
         width: 70px;
+        margin-bottom: 10px;
     }
+    /*** LIEN IMAGE NINTENDO ***/
+    #frst-info a img {
+        margin-top: 5px;
+        width: 150px;
+    }
+    /************
+      CATALOGUE 
+    ************/
     .infobdd {
         width: 440px;
     }
+    /*************
+    FORM RECHERCHE
+    **************/
     .form1 {
         margin: 0 auto;
         width: 95%;
-    }
-    .form2 {
-        width: 95%;
-        margin-top: 20px;
-        margin-bottom: 140px;
     }
     #btn-search {
         font-size: 14px;
