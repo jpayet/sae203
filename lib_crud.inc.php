@@ -205,9 +205,9 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p class="center-size">Le jeu vidéo ' . $titre . ' a été modifié.</p>' . "\n";
+            echo '<p class="center-size"> Le jeu vidéo ' . $titre . ' a été modifié.</p>' . "\n";
         } else {
-            echo '<p class="center-size">Erreur lors de la modification.</p>' . "\n";
+            echo '<p class="center-size"> Erreur lors de la modification.</p>' . "\n";
             die();
         }
     }
@@ -309,7 +309,7 @@
         if ($resultat->rowCount() == 1) {
             echo '<p class="center-size">Le studio ' . $nom . ' a été modifié.</p>' . "\n";
         } else {
-            echo '< class="center-size">Erreur lors de la modification.</p>' . "\n";
+            echo '<p class="center-size">Erreur lors de la modification.</p>' . "\n";
             die();
         }
     }

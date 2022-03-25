@@ -20,7 +20,7 @@
     </header>
 
     <div id="ss-navbar">
-        <p>Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles</p>
+        <p>Bienvenue sur <span><b> GameLibrary </b></span> : le site qui receuil les jeux vidéos sur Consoles, PC et mobiles</p>
     </div>
 
     <article id="mlr-note">

@@ -21,7 +21,7 @@
 </header>
 
 <div id="ss-navbar">
-    <p> Découvrez notre catalogue, trouvez quel sera votre prochain jeu </p>
+    <p> Découvrer notre catalogue, trouver quel sera votre prochain jeu </p>
 </div>
 
 <?php
