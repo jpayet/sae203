@@ -19,7 +19,7 @@
         </nav>
     </header>
 	
-	    <h1>Supprimer un jeu</h1>
+	    <h1 class="gestion-h1">Vous venez de supprimer un élément de la table jeux vidéo</h1>
 	    <hr />
 	    <?php
 	        require '../lib_crud.inc.php';

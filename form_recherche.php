@@ -21,7 +21,7 @@
 </header>
 
 <div id="ss-navbar">
-    Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
+    <p>Vous cherchez quelque chose de spécial ? C'est ici que ça se passe !</p>
 </div>
 
 <main class="form-bg">

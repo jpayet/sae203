@@ -17,6 +17,12 @@ p {
     margin-bottom: 0;
 }
 
+.center-size {
+    padding: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+
 
 /***********************
     CONTENT 
@@ -49,7 +55,7 @@ nav {
 
 #ss-navbar {
     width: 100%;
-    height: 30px;
+    padding: 5px;
     background-color: black;
     text-align: center;
     color: #fff;
@@ -60,8 +66,6 @@ nav {
 
 #ss-navbar span {
     color: orange;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 
@@ -151,14 +155,17 @@ img#noteimg {
     transition: 0.5s;
 }
 
-#p {
+.decouvrir {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-#cp-coeur a {
-    text-align: center;
+#p {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 
@@ -268,12 +275,12 @@ footer p {
 /* cards */
 
 .infobdd {
+    color: #fff;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 460px;
     transition: 0.5s;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 .infobdd:hover {
@@ -306,9 +313,6 @@ footer p {
 
 @media screen and (max-width: 480px) {
     /*** NAVBAR ***/
-    #ss-navbar {
-        font-size: 2.25vw;
-    }
     /************
         INDEX
     ************/
@@ -354,9 +358,13 @@ footer p {
     /*************
     FORM RECHERCHE
     **************/
+    .formulaire {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 90vw;
+    }
     .form1 {
         margin: 0 auto;
-        width: 95%;
     }
     #btn-search {
         font-size: 14px;

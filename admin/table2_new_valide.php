@@ -18,7 +18,7 @@
         </nav>
     </header>
 	
-	    <h1>Ajouter un studio</h1>
+	    <h1 class="gestion-h1">Ajouter un studio</h1>
 	    <hr />
 	    <?php
 	        require '../lib_crud.inc.php';

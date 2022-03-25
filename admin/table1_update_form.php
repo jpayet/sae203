@@ -19,7 +19,7 @@
         </nav>
     </header>
     
-    <h1>Modifier un jeu</h1>
+    <h1 class="gestion-h1">Modifier un jeu</h1>
     <hr />
     <?php
         require '../lib_crud.inc.php';

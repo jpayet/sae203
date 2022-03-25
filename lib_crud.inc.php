@@ -127,9 +127,9 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>Le jeux vidéo ' . $titre . ' a été ajoutée au catalogue.</p>' . "\n";
+            echo '<p class="center-size">Le jeux vidéo ' . $titre . ' a été ajoutée au catalogue.</p>' . "\n";
         } else {
-            echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
+            echo '<p class="center-size">Erreur lors de l\'ajout.</p>' . "\n";
             die();
         }
   }
@@ -145,9 +145,9 @@
         die();
     }
     if ($resultat->rowCount()==1) {
-        echo '<p>Le jeu vidéo numéro '.$id.' a été supprimé du catalogue.</p>'."\n";
+        echo '<p class="center-size">Le jeu vidéo numéro '.$id.' a été supprimé du catalogue.</p>'."\n";
     } else {
-        echo '<p>Erreur lors de la suppression.</p>'."\n";
+        echo '<p class="center-size">Erreur lors de la suppression.</p>'."\n";
         die();
     }
   }
@@ -205,9 +205,9 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>Le jeu vidéo ' . $titre . ' a été modifié.</p>' . "\n";
+            echo '<p class="center-size">Le jeu vidéo ' . $titre . ' a été modifié.</p>' . "\n";
         } else {
-            echo '<p>Erreur lors de la modification.</p>' . "\n";
+            echo '<p class="center-size">Erreur lors de la modification.</p>' . "\n";
             die();
         }
     }
@@ -253,9 +253,9 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>Le studio ' . $nom . ' a été ajoutée au catalogue.</p>' . "\n";
+            echo '<p class="center-size">Le studio ' . $nom . ' a été ajoutée au catalogue.</p>' . "\n";
         } else {
-            echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
+            echo '<p class="center-size">Erreur lors de l\'ajout.</p>' . "\n";
             die();
         }
     }
@@ -271,9 +271,9 @@
             die();
         }
         if ($resultat->rowCount()==1) {
-            echo '<p>Le studio numéro '.$id.' a été supprimée du catalogue.</p>'."\n";
+            echo '<p class="center-size">Le studio numéro '.$id.' a été supprimée du catalogue.</p>'."\n";
         } else {
-            echo '<p>Erreur lors de la suppression.</p>'."\n";
+            echo '<p class="center-size">Erreur lors de la suppression.</p>'."\n";
             die();
         }
     }
@@ -307,9 +307,9 @@
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>Le studio ' . $nom . ' a été modifié.</p>' . "\n";
+            echo '<p class="center-size">Le studio ' . $nom . ' a été modifié.</p>' . "\n";
         } else {
-            echo '<p>Erreur lors de la modification.</p>' . "\n";
+            echo '< class="center-size">Erreur lors de la modification.</p>' . "\n";
             die();
         }
     }

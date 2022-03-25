@@ -20,19 +20,19 @@
     </header>
 
     <div id="ss-navbar">
-        Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles.
+        <p>Bienvenue sur <span><b> GameLibrary </b></span> : le site receuil des jeux vidéos sur Consoles, PC et mobiles</p>
     </div>
 
     <article id="mlr-note">
         <div id="apercu">
-            <img src="img/zeldaBOTWbanner.jpg" alt="">
+            <img src="img/zeldaBOTWbanner.jpg" alt="zelda_breath_of-the_wild">
         </div> 
         <div id="frst-info">
             <h1>Le mieux noté</h1>
             <p>
                 <span id="titreNote">The Legend Of Zelda : Breath Of The Wild </span><br>
             </p>
-            <img id="noteimg" src="img/note-sae203.png" alt="">
+            <img id="noteimg" src="img/note-sae203.png" alt="ninetndo-eshop">
             <p>
                 <i>sortie le 03/03/2017 </i><br>
                 prix sur le <span id="prixNote">Nintendo e-shop</span><b>: 69.99€ </b> <br>
@@ -45,11 +45,14 @@
     <article id="cp-coeur">
         <h2>Nos coups de coeurs</h3>
         <div class="imgcoeur">
-            <img src="img/xcom2.jpg" alt="">
-            <img src="img/ori.jpg" alt="">
-            <img src="img/borderlands-3.jpg" alt="">
+            <img src="img/xcom2.jpg" alt="xcom2">
+            <img src="img/ori.jpg" alt="ori">
+            <img src="img/borderlands-3.jpg" alt="borderlands 3">
         </div> 
-        <p><a href="listing.php">Découvrir dans le catalogue<a></p>
+        <div class="decouvrir">
+            <p><a href="listing.php">Découvrir tous les jeux dans le catalogue <i class="fa-solid fa-arrow-pointer"></i><a></p>
+            <p><a href="form_recherche.php">Rechercher celui que vous voulez <i class="fa-solid fa-magnifying-glass"></i><a></p>
+        </div>
     </article>
 
 <?php

@@ -19,7 +19,8 @@
         </nav>
     </header>
 
-	<h1 style="text-align:center">Ajouter un nouveau jeu vidéo</h1>
+	<h1 class="gestion-h1">Ajouter un nouveau jeu vidéo</h1>
+    <hr>
 
 	<form class="add_form" action="table1_new_valide.php" method="POST" enctype="multipart/form-data">
 		<label for="titre"></label>
@@ -53,7 +54,7 @@
 	        deconnexionBD($co);
 	    ?>
 	    </select><br />
-	    <input type="submit" value="Ajouter" />
+	    <input type="submit" name="boutton rechercher" value="Ajouter" />
 	</form>
 
 	<footer id="footer">
