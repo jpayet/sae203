@@ -30,5 +30,8 @@
 	        effaceStud($co, $id);
 	        deconnexionBD($co);
 	    ?>
+
+    <p class="center"><a href="studio"><i class="fa-solid fa-arrow-left"></i> Retourner sur la base de données</a></p>
+    
 	</body>
 </html> 

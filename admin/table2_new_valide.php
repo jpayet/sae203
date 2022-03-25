@@ -37,6 +37,8 @@
 	        deconnexionBD($co);
 	    ?>
 
+	<p class="center"><a href="studio"><i class="fa-solid fa-arrow-left"></i> Retourner sur la base de données</a></p>
+
 	<footer id="footer">
 			<p>
 				Copyright © 2021-2024 GameLibrary. Tous droits réservés. Un site made by @mmi21h11
