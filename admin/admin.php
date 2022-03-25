@@ -19,10 +19,10 @@
         </nav>
     </header>
        
-    <h1>Gestion des données</h1>
-    <ul>
-        <li>Gestion des <a href="jeux_video">jeux video</a></li>
-        <li>Gestion des <a href="studio">studio de développement</a></li>
+    <h1 class="gestion-h1">Gestion des données</h1>
+    <ul class="gestion-ul">
+        <li>Gestion des <a href="jeux_video">jeux vidéos <i class="fa-solid fa-server"></i></a></li>
+        <li>Gestion des <a href="studio">studio de développement <i class="fa-solid fa-server"></i></a></li>
     </ul>
 
     <footer id="footer">

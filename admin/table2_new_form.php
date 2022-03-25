@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-	<h1>Ajouter un studio</h1> 
+	<h1 class="gestion-h1">Ajouter un studio</h1> 
 	<hr />
 	<form class="add_form" action="table2_new_valide.php" method="POST" enctype="multipart/form-data">
         <label for="nom"></label>
